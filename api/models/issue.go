@@ -2,11 +2,6 @@
 
 package models
 
-import (
-            "github.com/jinzhu/gorm"
-)
-
-
 type Issue struct {
     ID uint `json:"issue_id" gorm:"primary_key"`
     Name string `json:"issue_name"`

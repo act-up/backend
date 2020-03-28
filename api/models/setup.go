@@ -3,18 +3,18 @@
 package models
 
 import (
-  "github.com/jinzhu/gorm"
-  _ "github.com/jinzhu/gorm/dialects/postgres"
+            "fmt"
+            "github.com/jinzhu/gorm"
+            _ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
 func SetupModels() *gorm.DB {
-  db, err := gorm.Open("postgres", "user=antonellawilby dbname=advocacy_db")
+    db, err := gorm.Open("postgres", "host=localhost user=postgres dbname=advocacy_db sslmode=disable")
 
-  if err != nil {
-    panic("Failed to connect to database!")
-  }
+    if err != nil {
+        fmt.Printf("Error: %s\n", err)
+        panic("Failed to connect to database!")
+    }
 
-  db.AutoMigrate(&Issue{})
-
-  return db
+    return db
 }

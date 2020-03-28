@@ -1,9 +1,10 @@
 package main
 
 import (
-            "fmt"
             "net/http"
             "github.com/gin-gonic/gin"
+            "backend/api/models"
+            "backend/api/controllers"
 )
 
 func main() {
@@ -18,12 +19,15 @@ func main() {
 
     db := models.SetupModels()
 
+    r.Use(func(c *gin.Context) {
+        c.Set("db", db)
+        c.Next()
+    })
+
+    // List all issues in database
+    r.GET("/active_issues", controllers.ListIssues)
+
     // Listen and serve on localhost:8080
     r.Run()
 
-}
-
-func handler(w http.ResponseWriter, r *http.Request) {
-	// For this case, we will always pipe "Hello World" into the response writer
-	fmt.Fprintf(w, "Hello World!")
 }
