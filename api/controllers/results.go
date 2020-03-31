@@ -1,4 +1,4 @@
-// controllers/issues.go
+// controllers/results.go
 
 package controllers
 
@@ -9,7 +9,7 @@ import (
     "backend/api/models"
 )
 
-func GetIssues(c *gin.Context) {
+func GetResults(c *gin.Context) {
     db := c.MustGet("db").(*gorm.DB)
 
     var active_issues []models.Issue

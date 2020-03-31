@@ -1,6 +1,6 @@
-// models/setup.go
+// config/db.go
 
-package models
+package config
 
 import (
             "fmt"
@@ -8,7 +8,9 @@ import (
             _ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
-func SetupModels() *gorm.DB {
+var db *gorm.DB
+
+func SetupDB() *gorm.DB {
     db, err := gorm.Open("postgres", "host=localhost user=postgres dbname=advocacy_db sslmode=disable")
 
     if err != nil {

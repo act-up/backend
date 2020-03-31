@@ -1,31 +1,18 @@
 package main
 
 import (
-            "net/http"
-            "github.com/gin-gonic/gin"
-            "backend/api/models"
-            "backend/api/controllers"
+            "backend/api/config"
+            //"backend/api/models"
 )
 
 func main() {
 
-    // Declare a new router
-    r := gin.Default()
+    // Set up database connection
+    db := config.SetupDB()
 
-    // Define GET route to / endpoint
-    r.GET("/", func(c *gin.Context) {
-      c.JSON(http.StatusOK, gin.H{"data": "hello world"})
-    })
+    // Set up routes
+    r := config.SetupRoutes(db)
 
-    db := models.SetupModels()
-
-    r.Use(func(c *gin.Context) {
-        c.Set("db", db)
-        c.Next()
-    })
-
-    // List all issues in database
-    r.GET("/active_issues", controllers.ListIssues)
 
     // Listen and serve on localhost:8080
     r.Run()

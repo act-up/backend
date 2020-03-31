@@ -9,7 +9,7 @@ import (
     "backend/api/models"
 )
 
-func GetIssues(c *gin.Context) {
+func GetSuggestions(c *gin.Context) {
     db := c.MustGet("db").(*gorm.DB)
 
     var active_issues []models.Issue
