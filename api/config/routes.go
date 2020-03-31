@@ -18,10 +18,16 @@ func SetupRoutes(db *gorm.DB) *gin.Engine {
         c.Next()
     })
 
-    v1 := r.Group("/")
+    g1 := r.Group("/")
     {
         // List all issues in database
-        v1.GET("/active_issues", controllers.GetIssues)
+        g1.GET("issues", controllers.GetIssues)
+        g1.POST("issues/:id", controllers.GetIssue)
+        g1.GET("results", controllers.GetResults)
+        g1.GET("results/:id", controllers.GetResult)
+        g1.PUT("results/:id", controllers.UpdateResult)
+        g1.POST("suggest", controllers.CreateSuggestion)
+
     }
 
     return r

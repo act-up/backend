@@ -9,19 +9,17 @@ import (
     "backend/api/models"
 )
 
-func GetSuggestions(c *gin.Context) {
+// Create a Suggestion
+func CreateSuggestion(c *gin.Context) {
     db := c.MustGet("db").(*gorm.DB)
 
-    var active_issues []models.Issue
-    err := models.GetIssues(db, &active_issues)
+	var suggestion models.Suggestion
+	c.BindJSON(&suggestion)
+	err := models.CreateASuggestion(db, &suggestion)
 
-    if err != nil {
+	if err != nil {
 		c.AbortWithStatus(http.StatusNotFound)
 	} else {
-		c.JSON(http.StatusOK, active_issues)
+		c.JSON(http.StatusOK, suggestion)
 	}
-
-    //db.Find(&active_issues)
-    //c.JSON(http.StatusOK, gin.H{"data": active_issues})
-
 }

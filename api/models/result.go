@@ -19,6 +19,14 @@ func (i *Result) TableName() string {
 	return "results"
 }
 
+// Get results for all issues in database
+func GetAllResults(db *gorm.DB, results *[]Result) (err error) {
+	if err = db.Find(results).Error; err != nil {
+		return err
+	}
+	return nil
+}
+
 // Get results of an issue
 func GetAResult(db *gorm.DB, result *Result, id string) (err error) {
 	if err := db.Where("id = ?", id).First(result).Error; err != nil {

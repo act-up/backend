@@ -18,13 +18,13 @@ type Issue struct {
     DM string `json:"twitter_dm_form"`
 }
 
-// Return table name 
+// Return table name
 func (i *Issue) TableName() string {
 	return "active_issues"
 }
 
 // Get all issues in database
-func GetIssues(db *gorm.DB, issues *[]Issue) (err error) {
+func GetAllIssues(db *gorm.DB, issues *[]Issue) (err error) {
 	if err = db.Find(issues).Error; err != nil {
 		return err
 	}
