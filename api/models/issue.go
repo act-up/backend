@@ -7,15 +7,15 @@ import (
 )
 
 type Issue struct {
-    ID uint `json:"issue_id" gorm:"primary_key"`
-    Name string `json:"issue_name"`
-    Target string `json:"issue_target"`
-    Description string `json:"issue_description"`
-    URL string `json:"contact_url"`
-    Twitter string `json:"twitter_username"`
-    Email string `json:"contact_email"`
-    Letter string `json:"form_letter"`
-    DM string `json:"twitter_dm_form"`
+    ID uint `json:"id" gorm:"primary_key"`
+    IssueName string `json:"issue_name" binding:"required"`
+    IssueTarget string `json:"issue_target"`
+    IssueDescription string `json:"issue_description"`
+    ContactURL string `json:"contact_url"`
+    TwitterUsername string `json:"twitter_username"`
+    ContactEmail string `json:"contact_email"`
+    FormLetter string `json:"form_letter"`
+    TwitterDMForm string `json:"twitter_dm_form"`
 }
 
 // Return table name

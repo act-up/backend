@@ -10,9 +10,10 @@ type Suggestion struct {
     ID uint `json:"suggestion_id" gorm:"primary_key"`
     ContactName string `json:"contact_name"`
     ContactEmail string `json:"contact_email"`
-    Target string `json:"issue_target"`
-    Description string `json:"issue_description"`
-    Comments string `json:"other_comments"`
+    IssueTarget string `json:"issue_target"`
+    IssueSummary string `json:"issue_summary"`
+    IssueDescription string `json:"issue_description"`
+    Comments string `json:"comments"`
 }
 
 // Return table name

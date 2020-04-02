@@ -8,9 +8,9 @@ import (
 
 type Result struct {
     ID uint `json:"issue_id" gorm:"primary_key"`
-    NumForms string `json:"num_forms_sent"`
-    NumEmails string `json:"num_emails_sent"`
-    NumDMs string `json:"num_twitter_dms_sent"`
+    NumForms string `json:"num_forms"`
+    NumEmails string `json:"num_emails"`
+    NumTwitterDMs string `json:"num_twitter_dms"`
     Resolution string `json:"resolution"`
 }
 

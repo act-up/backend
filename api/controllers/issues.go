@@ -17,7 +17,7 @@ func GetIssues(c *gin.Context) {
     err := models.GetAllIssues(db, &active_issues)
 
     if err != nil {
-		c.AbortWithStatus(http.StatusNotFound)
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Record not found!"})
 	} else {
 		c.JSON(http.StatusOK, active_issues)
 	}
@@ -37,8 +37,8 @@ func GetIssue(c *gin.Context) {
 	err := models.GetAnIssue(db, &issue, id)
 
 	if err != nil {
-		c.AbortWithStatus(http.StatusNotFound)
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Record not found!"})
 	} else {
-		c.JSON(http.StatusOK, issue)
+	     c.JSON(http.StatusOK, issue)
 	}
 }

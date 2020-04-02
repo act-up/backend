@@ -1,5 +1,5 @@
 CREATE TABLE active_issues (
-    issue_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     issue_name VARCHAR (200) NOT NULL,
     issue_target VARCHAR (100) NOT NULL,
     issue_description VARCHAR (2500) NOT NULL,
@@ -10,15 +10,16 @@ CREATE TABLE active_issues (
     twitter_dm_form VARCHAR (10000)
 );
 
+
 CREATE TABLE archived_issues (
 ) INHERITS (active_issues);
 
 
 CREATE TABLE results (
-    issue_id SERIAL PRIMARY KEY,
-    num_forms_sent INT,
-    num_emails_sent INT,
-    num_twitter_dms_sent INT,
+    id SERIAL PRIMARY KEY,
+    num_forms INT,
+    num_emails INT,
+    num_twitter_dms INT,
     resolution VARCHAR (10000)
 );
 
@@ -29,5 +30,5 @@ CREATE TABLE suggested (
     issue_target VARCHAR (100) NOT NULL,
     issue_summary VARCHAR (1000) NOT NULL,
     issue_description VARCHAR (10000) NOT NULL,
-    other_comments VARCHAR (10000)
+    comments VARCHAR (10000)
 );
