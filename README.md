@@ -7,7 +7,9 @@ The REST API is written in [Golang](https://golang.org/) with the [Gin](https://
 
 ## Database
 
-We are using [PostgreSQL](https://www.postgresql.org/) for the database. The `db` folder contains snippets for setting up the database and tables.
+We are using [PostgreSQL](https://www.postgresql.org/) for the database, with the [pq](https://github.com/lib/pq) Postgres driver for Go.
+
+The `db` folder contains snippets for setting up the database and tables.
 
 
 ## Tests
