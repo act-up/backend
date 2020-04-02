@@ -1,0 +1,10 @@
+INSERT INTO "active_issues" (issue_name, issue_target, issue_description, contact_url, contact_email, form_letter)
+VALUES
+    (
+        'Issue Name',
+        'Issue Target',
+        'Issue description',
+        'Issue URL',
+        'Issue Contact Email ',
+        'Form Letter'
+    );
