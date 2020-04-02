@@ -2,7 +2,7 @@
 
 ## API
 
-The REST API is written in [Golang](https://golang.org/) with the [Gin](https://github.com/gin-gonic/gin) web framework and the [Gorm](https://github.com/jinzhu/gorm) ORM library for Golang.
+The REST API is written in [Golang](https://golang.org/) with the [Gin](https://github.com/gin-gonic/gin) web framework and the [Gorm](https://github.com/jinzhu/gorm) ORM library.
 
 
 ## Database
@@ -17,7 +17,7 @@ We are using [Postman](https://www.postman.com/) to create and run API tests. Th
 
 ### Install NodeJS Testing Dependencies
 
-```npm install follow-redirects```
+```$ npm install follow-redirects```
 
 
 ```$ node <test_name>.js```
