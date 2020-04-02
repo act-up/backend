@@ -21,5 +21,6 @@ func CreateSuggestion(c *gin.Context) {
 		c.AbortWithStatus(http.StatusNotFound)
 	} else {
 		c.JSON(http.StatusOK, suggestion)
+        return
 	}
 }
