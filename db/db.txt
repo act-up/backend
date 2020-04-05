@@ -1,13 +1,10 @@
+CREATE DATABASE advocacy_db;
+
 CREATE TABLE active_issues (
     id SERIAL PRIMARY KEY,
-    issue_name VARCHAR (200) NOT NULL,
-    issue_target VARCHAR (100) NOT NULL,
-    issue_description VARCHAR (2500) NOT NULL,
-    contact_url VARCHAR (100),
-    twitter_username VARCHAR (50),
-    contact_email VARCHAR (50),
-    form_letter VARCHAR (3000) NOT NULL,
-    twitter_dm_form VARCHAR (10000)
+    issue json NOT NULL,
+    contact_info  json NOT NULL,
+    webform_format json NOT NULL
 );
 
 

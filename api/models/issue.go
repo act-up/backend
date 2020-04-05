@@ -4,18 +4,14 @@ package models
 
 import (
             "github.com/jinzhu/gorm"
+            "encoding/json"
 )
 
 type Issue struct {
     ID uint `json:"id" gorm:"primary_key"`
-    IssueName string `json:"issue_name" binding:"required"`
-    IssueTarget string `json:"issue_target"`
-    IssueDescription string `json:"issue_description"`
-    ContactURL string `json:"contact_url"`
-    TwitterUsername string `json:"twitter_username"`
-    ContactEmail string `json:"contact_email"`
-    FormLetter string `json:"form_letter"`
-    TwitterDMForm string `json:"twitter_dm_form"`
+    Issue json.RawMessage
+    ContactInfo json.RawMessage
+    WebformFormat json.RawMessage
 }
 
 // Return table name
