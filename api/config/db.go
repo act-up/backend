@@ -12,7 +12,7 @@ import (
 var db *gorm.DB
 
 func SetupDB() *gorm.DB {
-    db, err := gorm.Open("postgres", "host=localhost user=postgres dbname=advocacy_db sslmode=disable")
+    db, err := gorm.Open("postgres", "user=postgres password=postgres dbname=advocacy_db sslmode=disable")
 
     if err != nil {
         fmt.Printf("Error: %s\n", err)
