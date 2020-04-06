@@ -23,3 +23,25 @@ We are using [Postman](https://www.postman.com/) to create and run API tests. Th
 
 
 ```$ node <test_name>.js```
+
+
+## Installation
+
+Fetch and install golang packages:
+
+```
+go get github.com/gin-gonic/gin
+go get github.com/jinzhu/gorm
+go get github.com/lib/pq
+```
+
+```
+go install github.com/gin-gonic/gin github.com/jinzhu/gorm github.com/lib/pq
+```
+
+Build and install this package:
+
+```
+go build main.go
+go install main.go
+```

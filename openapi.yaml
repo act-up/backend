@@ -1,0 +1,43 @@
+swagger: "2.0"
+info:
+  title: "Act.Up API"
+  description: "API for getting active issues from the Act.Up database, retrieving results, and creating user campaign suggestions."
+  version: "1.0.0"
+  contact:
+    email: "act.up.advocacy@gmail.com"
+host: "api.actup.us"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+basePath: "/v1"
+schemes:
+  #- "https"
+  - "http"
+paths:
+  /issues:
+    get:
+      summary: "Returns a list of all active issues."
+      description: "Returns a list of all active issues."
+      operationId: "GetIssues"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "OK"
+  /issues/{id}:
+    get:
+      summary: "Returns an active issue by ID."
+      parameters:
+        - name: "id"
+          in: path
+          description: "ID of issue to return"
+          required: true
+          type: string
+      description: "Returns an active issue by ID."
+      operationId: "GetIssue"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "OK"

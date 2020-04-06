@@ -1,10 +1,28 @@
-INSERT INTO "active_issues" (issue_name, issue_target, issue_description, contact_url, contact_email, form_letter)
+INSERT INTO "active_issues" (issue, contact_info, webform_format)
 VALUES
     (
-        'Issue Name',
-        'Issue Target',
-        'Issue description',
-        'Issue URL',
-        'Issue Contact Email ',
-        'Form Letter'
+        '{
+            "IssueName":        "Trader Joes: Please pay your workers hazard pay during the COVID-19 Pandemic!",
+            "Description":      "todo: describe issue here",
+            "Salutation":       "Dear Trader Joes",
+            "Valediction":      "Sincerely,",
+            "FormLetter":       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id justo a urna imperdiet sodales maximus quis metus. Suspendisse a arcu id lacus placerat elementum id et nunc. Pellentesque et facilisis sapien. Nunc pulvinar consectetur malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras nec mi ex. Fusce eu neque vitae nunc consectetur accumsan ut et enim. Aenean ultricies dolor eleifend ipsum euismod eleifend. In eu tellus vel nisl scelerisque aliquet in sit amet quam. Nulla rutrum, velit et ullamcorper faucibus, ipsum enim posuere velit, vel porttitor urna lectus ac tortor. Cras vestibulum ipsum id justo tincidunt aliquam.\nPhasellus non tortor sit amet ante congue fermentum eu vitae diam. Nam a vulputate justo, eu euismod risus. Aliquam mollis, dolor ac hendrerit eleifend, elit ante mattis risus, quis finibus velit magna non tellus. Praesent commodo mauris ac eros convallis placerat. Phasellus sagittis nunc augue, vitae accumsan velit imperdiet non. Etiam quis risus sit amet libero maximus vestibulum ac et nisi. Donec ornare magna non lorem dignissim posuere. Integer semper eros eget eleifend volutpat. Sed sit amet nibh enim. Mauris sed arcu lorem. Nullam viverra tortor ut lacus interdum, sit amet venenatis elit pharetra. Maecenas bibendum, diam in volutpat porta, est tortor tempor sapien, sed suscipit lectus diam vitae ex. Integer nec risus vel dolor rutrum vehicula. Pellentesque non nibh posuere diam cursus vulputate.\nAliquam blandit augue vitae magna condimentum vehicula. Proin eu odio sem. Quisque suscipit consequat aliquam. Aenean eu urna sit amet justo pulvinar interdum. Nullam scelerisque tellus eu dui mattis bibendum. Donec fringilla quam est, ac pulvinar elit commodo in. Curabitur ullamcorper elementum commodo. Duis iaculis nisi dolor, in dictum dolor volutpat quis. Pellentesque pulvinar mattis malesuada.",
+            "TwitterDMForm":    null
+        }',
+
+
+        '{
+            "email": "webRelations@traderjoes.com"
+        }',
+
+        '{
+            "URL":              "https://www.traderjoes.com/contact-us/product-feedback",
+            "FirstName":        "txtFirstName",
+            "LastName":         "txtLastName",
+            "PhoneNumber":      "txtPhoneNumber",
+            "EmailAddress":     "txtEmailAddress",
+            "TypeOfFeedback":   "ddlFeedBack",
+            "FeedbackOptions":  ["Kudos", "Quality Concerns", "Allergen Inquiry", "Discontinued Product", "Sustainability", "Product Suggestion", "Other"],
+            "Comments":         "txtComments"
+        }'
     );
