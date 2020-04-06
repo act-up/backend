@@ -15,7 +15,8 @@ RUN cd /go/src/backend && go build -o main .
 FROM alpine
 RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk*
 WORKDIR /api
-COPY --from=build-env /go/src/backend /api
+COPY --from=build-env /go/src/backend .
+COPY --from=build-env /go/src/backend/docker/.env .
 
 EXPOSE 8080
 ENTRYPOINT [ "./main" ]
