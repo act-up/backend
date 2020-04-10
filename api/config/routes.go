@@ -4,11 +4,11 @@ package config
 
 import (
             "github.com/gin-gonic/gin"
-            "github.com/jinzhu/gorm"
+            "database/sql"
             "github.com/act-up/backend/api/controllers"
 )
 
-func SetupRoutes(db *gorm.DB) *gin.Engine {
+func SetupRoutes(db *sql.DB) *gin.Engine {
 
     // Declare a new router
     r := gin.Default()

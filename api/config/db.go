@@ -4,11 +4,11 @@ package config
 
 import (
             "fmt"
+            "os"
+            "log"
             "database/sql"
-            "github.com/jinzhu/gorm"
             _ "github.com/jinzhu/gorm/dialects/postgres"
             _ "github.com/lib/pq"
-            "github.com/act-up/backend/api/models"
 )
 
 var db *sql.DB
@@ -40,4 +40,12 @@ func SetupDB() *sql.DB {
 
     return conn
 
+}
+
+func mustGetenv(k string) string {
+	v := os.Getenv(k)
+	if v == "" {
+		log.Panicf("%s environment variable not set.", k)
+	}
+	return v
 }
