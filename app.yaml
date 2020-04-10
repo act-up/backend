@@ -1,8 +1,9 @@
 runtime: go113
 
 env_variables:
-    CLOUDSQL_CONNECTION: /cloudsql/actup-273804:us-central1:postgres-actup
+    CLOUDSQL_CONNECTION: actup-273804:us-central1:postgres-actup     # no leading/trailing slashes
     CLOUDSQL_DATABASE: advocacy_db
     CLOUDSQL_USER: postgres
-    CLOUTSQL_PASSWORD: postgres
-    CLOUDSQL_SOCKET_PREFIX: /cloudsql
+    CLOUDSQL_PASSWORD: postgres
+    CLOUDSQL_SOCKET_PREFIX: cloudsql                                 # no leading/trailing slashes
+    CLOUDSQL_SSLMODE: disable
