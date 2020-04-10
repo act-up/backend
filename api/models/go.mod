@@ -1,3 +1,3 @@
-module backend/api/models
+module models
 
-go 1.14
+go 1.13
