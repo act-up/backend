@@ -6,7 +6,8 @@ import (
             "fmt"
             "github.com/jinzhu/gorm"
             _ "github.com/jinzhu/gorm/dialects/postgres"
-            "github.com/GoogleCloudPlatform/cloudsql-proxy/cmd/cloud_sql_proxy"
+            //"github.com/GoogleCloudPlatform/cloudsql-proxy/cmd/cloud_sql_proxy"
+            "github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/dialers/postgres"
             "github.com/act-up/backend/api/models"
 )
 
