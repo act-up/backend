@@ -5,7 +5,7 @@ package config
 import (
             "github.com/gin-gonic/gin"
             "github.com/jinzhu/gorm"
-            "backend/api/controllers"
+            "github.com/act-up/backend/api/controllers"
 )
 
 func SetupRoutes(db *gorm.DB) *gin.Engine {
