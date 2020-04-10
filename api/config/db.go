@@ -29,16 +29,15 @@ func SetupDB() *sql.DB {
         socket = "/cloudsql"
     }
 
-    // PostgreSQL Connection, uncomment to use.
-	// connection string format: user=USER password=PASSWORD host=/cloudsql/PROJECT_ID:REGION_ID:INSTANCE_ID/[ dbname=DB_NAME]
-	dbURI := fmt.Sprintf("user=%s password=%s host=/cloudsql/%s dbname=%s", user, password, connectionName, dbName)
-	conn, err := sql.Open("postgres", dbURI)
+    // connection string format: user=USER password=PASSWORD host=/cloudsql/PROJECT_ID:REGION_ID:INSTANCE_ID/[ dbname=DB_NAME]
+    dbURI := fmt.Sprintf("user=%s password=%s host=/cloudsql/%s dbname=%s", user, password, connectionName, dbName)
+    conn, err := sql.Open("postgres", dbURI)
 
-	if err != nil {
-		fmt.Printf("Error: %s\n", err)
+    if err != nil {
+    	fmt.Printf("Error: %s\n", err)
         panic("Failed to connect to database!")
-	}
+    }
 
-	return conn
+    return conn
 
 }

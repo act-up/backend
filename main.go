@@ -1,7 +1,7 @@
 package main
 
 import (
-            "github.com/act-up/backend/api/config"
+            "backend/api/config"
 )
 
 func main() {
