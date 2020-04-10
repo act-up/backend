@@ -45,3 +45,16 @@ Build and install this package:
 go build main.go
 go install main.go
 ```
+
+
+
+
+
+
+## TODO update documentation
+
+### Google Cloud Infrastructure Setup
+
+API: the golang REST API is deployed using Google App Engine
+
+Database: the data is stored in a PostgreSQL database hosted on Google Cloud SQL for PostgreSQL 
