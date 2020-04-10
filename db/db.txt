@@ -12,12 +12,12 @@ CREATE TABLE archived_issues (
 ) INHERITS (active_issues);
 
 
-CREATE TABLE results (
+CREATE TABLE issue_statistics (
     id SERIAL PRIMARY KEY,
     num_forms INT,
     num_emails INT,
     num_twitter_dms INT,
-    resolution VARCHAR (10000)
+    resolution json
 );
 
 

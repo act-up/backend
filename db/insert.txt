@@ -26,3 +26,8 @@ VALUES
             "Comments":         "txtComments"
         }'
     );
+
+
+
+INSERT INTO "issue_statistics" (num_forms, num_emails, num_twitter_dms)
+VALUES(0, 0, 0);
