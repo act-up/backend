@@ -4,34 +4,41 @@ package config
 
 import (
             "fmt"
+            "database/sql"
             "github.com/jinzhu/gorm"
             _ "github.com/jinzhu/gorm/dialects/postgres"
-            "database/sql"
-            //"github.com/GoogleCloudPlatform/cloudsql-proxy/cmd/cloud_sql_proxy"
-            "github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/dialers/postgres"
+            _ "github.com/lib/pq"
             "github.com/act-up/backend/api/models"
 )
 
-var db *gorm.DB
+var db *sql.DB
 
-func SetupDB() *gorm.DB {
+func SetupDB() *sql.DB {
 
-    dsn := fmt.Sprintf("host=%s dbname=%s user=%s password=%s sslmode=disable",
-                   "cellular-codex-273108:us-central1:postgres-actup",
-                   "advocacy_db",
-                   "postgres",
-                   "postgres")
+    var (
+            connectionName = mustGetenv("CLOUDSQL_CONNECTION")
+            user           = mustGetenv("CLOUDSQL_USER")
+            dbName         = os.Getenv("CLOUDSQL_DATABASE")
+            password       = os.Getenv("CLOUDSQL_PASSWORD")
+            socket         = os.Getenv("CLOUDSQL_SOCKET_PREFIX")
+        )
 
-    db, err := sql.Open("cloudsqlpostgres", dsn)
 
-    //db, err := gorm.Open("postgres", "dbname=advocacy_db user=postgres password=postgres host=/cloudsql/35.223.164.101 sslmode=disable")
-
-    if err != nil {
-        fmt.Printf("Error: %s\n", err)
-        panic("Failed to connect to database!")
+    // /cloudsql is used on App Engine.
+    if socket == "" {
+        socket = "/cloudsql"
     }
 
-    db.AutoMigrate(&models.Issue{})
+    // PostgreSQL Connection, uncomment to use.
+	// connection string format: user=USER password=PASSWORD host=/cloudsql/PROJECT_ID:REGION_ID:INSTANCE_ID/[ dbname=DB_NAME]
+	dbURI := fmt.Sprintf("user=%s password=%s host=/cloudsql/%s dbname=%s", user, password, connectionName, dbName)
+	conn, err := sql.Open("postgres", dbURI)
 
-    return db
+	if err != nil {
+		fmt.Printf("Error: %s\n", err)
+        panic("Failed to connect to database!")
+	}
+
+	return conn
+
 }
