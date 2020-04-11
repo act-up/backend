@@ -2,17 +2,17 @@ INSERT INTO "active_issues" (issue, contact_info, webform_format)
 VALUES
     (
         '{
-            "IssueName":        "Trader Joes: Please pay your workers hazard pay during the COVID-19 Pandemic!",
+            "IssueName":        "Trader Joe0xE2s: Please pay your workers hazard pay during the COVID-19 Pandemic!",
             "Description":      "todo: describe issue here",
-            "Salutation":       "Dear Trader Joes",
+            "Salutation":       "Dear Trader Joe0xE2s",
             "Valediction":      "Sincerely,",
-            "FormLetter":       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id justo a urna imperdiet sodales maximus quis metus. Suspendisse a arcu id lacus placerat elementum id et nunc. Pellentesque et facilisis sapien. Nunc pulvinar consectetur malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras nec mi ex. Fusce eu neque vitae nunc consectetur accumsan ut et enim. Aenean ultricies dolor eleifend ipsum euismod eleifend. In eu tellus vel nisl scelerisque aliquet in sit amet quam. Nulla rutrum, velit et ullamcorper faucibus, ipsum enim posuere velit, vel porttitor urna lectus ac tortor. Cras vestibulum ipsum id justo tincidunt aliquam.\nPhasellus non tortor sit amet ante congue fermentum eu vitae diam. Nam a vulputate justo, eu euismod risus. Aliquam mollis, dolor ac hendrerit eleifend, elit ante mattis risus, quis finibus velit magna non tellus. Praesent commodo mauris ac eros convallis placerat. Phasellus sagittis nunc augue, vitae accumsan velit imperdiet non. Etiam quis risus sit amet libero maximus vestibulum ac et nisi. Donec ornare magna non lorem dignissim posuere. Integer semper eros eget eleifend volutpat. Sed sit amet nibh enim. Mauris sed arcu lorem. Nullam viverra tortor ut lacus interdum, sit amet venenatis elit pharetra. Maecenas bibendum, diam in volutpat porta, est tortor tempor sapien, sed suscipit lectus diam vitae ex. Integer nec risus vel dolor rutrum vehicula. Pellentesque non nibh posuere diam cursus vulputate.\nAliquam blandit augue vitae magna condimentum vehicula. Proin eu odio sem. Quisque suscipit consequat aliquam. Aenean eu urna sit amet justo pulvinar interdum. Nullam scelerisque tellus eu dui mattis bibendum. Donec fringilla quam est, ac pulvinar elit commodo in. Curabitur ullamcorper elementum commodo. Duis iaculis nisi dolor, in dictum dolor volutpat quis. Pellentesque pulvinar mattis malesuada.",
+            "FormLetter":       "I0xE2m writing to express my concern that the workers at Trader Joe0xE2s are not receiving hazard pay during the COVID-19 pandemic. These workers are on the front lines of the disease. Over the course of a single shift, they are exposed to countless people who may be infected--whether customers, co-workers, or someone in the supply chain--thereby increasing the risk to their own well being, as well as anyone else they come in contact with. These workers are unable to follow any-shelter at-home mandate, because their jobs are simply too important. Their pay should reflect this. A one-time bonus is not enough. A very small increase is not enough. These workers are people with full lives and loved ones, who are putting their lives at risk doing a job that our society needs done in order to function. It is your responsibility as an employer to provide a safe work environment for your employees, as well as for your customers. \n I implore you to do the right thing and provide your employees with hazard pay, protective equipment, and appropriate sick leave. Your customers stand with your workers.",
             "TwitterDMForm":    null
         }',
 
 
         '{
-            "email": "webRelations@traderjoes.com"
+            "email": "nhigh@traderjoes.com"
         }',
 
         '{
